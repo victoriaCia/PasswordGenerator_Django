@@ -1,0 +1,14 @@
+{% load static %}
+
+  <nav class="navbar navbar__container">
+    <a href="{% url 'home' %}" class="logo">Password Generator</a>
+    <!-- The order that we place the checkbox and label here is important because we will use css only for the click event to open the menu on mobile. -->
+    <input type="checkbox" id="toggler">
+    <label for="toggler"><i class="ri-menu-line"></i></label>
+    <div class="menu">
+      <ul class="list">
+        <li><a href="{% url 'home' %}">Home</a></li>
+        <li><a href="{% url 'about' %}">About</a></li>
+      </ul>
+    </div>
+  </nav>

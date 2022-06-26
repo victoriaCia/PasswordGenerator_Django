@@ -1,0 +1,46 @@
+{% extends 'generator/layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<form action="{% url 'password' %}">  <!--metodo GET-->
+    <div class="form-container">
+        <h1>Password Generator</h1>
+
+        <div class="length-container">
+            <label for="length">Select the length of your password:</label>
+            <div class="select-container">
+                <select name="length" id="lenght">
+                    <option value="6">6 characters</option>
+                    <option value="7">7 characters</option>
+                    <option value="8">8 characters</option>
+                    <option value="9">9 characters</option>
+                    <option value="10">10 characters</option>
+                    <option value="11">11 characters</option>
+                    <option value="12">12 characters</option>
+                    <option value="13">13 characters</option>
+                    <option value="14">14 characters</option>
+                </select>
+                <i></i>
+            </div>
+        </div>
+        <div>
+            <label for="uppercase">Uppercase</label>
+            <input type="checkbox" name="uppercase" id="uppercase">
+        </div>
+        <div>
+            <label for="special">Special Characters</label>
+            <input type="checkbox" name="special" id="special">
+        </div>
+        <div>
+            <label for="numbers">Numbers</label>
+            <input type="checkbox" name="numbers" id="numbers">
+        </div>
+
+        <button class="button-generate">GENERATE PASSWORD</button>
+    </div>
+</form>
+
+
+{% endblock %}
